@@ -1,0 +1,90 @@
+html {
+  font-size: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    125deg,
+    #acceff 15%,
+    #8ad2e4,
+    #a292ff,
+    #f696ff,
+    #ffc480 95%
+  );
+  background-size: 600%;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  animation: gradient-animation 8s linear infinite alternate;
+}
+@keyframes gradient-animation {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+form {
+  background-color: #f7f7f7;
+  box-shadow: 7px 7px 3px #6969696e, inset -4px -4px 8px #b1b1b1,
+    inset 2px 2px 8px #cfcfcf;
+  width: 360px;
+  height: 460px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.input-control:not(:last-child) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #e2ccff;
+  height: 6.5em;
+  padding-left: 2em;
+}
+
+.input-control:last-child {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6.5em;
+  padding-left: 2em;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 1.6em;
+  accent-color: #c69aff;
+}
+
+label {
+  font-size: 1.6em;
+  padding-left: 1.6em;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  border-left: 2px solid #e2ccff;
+  display: inline-flex;
+  align-items: center;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  background-color: #c9c9c95f;
+}
